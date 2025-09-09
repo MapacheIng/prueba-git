@@ -10,4 +10,8 @@ def factorial(n):
 def combinatoria(n, r):
     return factorial(n) // (factorial(r) * factorial(n - r))
 
-print(combinatoria(3, 2))
+def distribucion_binomial(n, k, p):
+    q = 1 - p
+    return combinatoria(n, k) * (p ** k) * (q ** (n - k))
+
+print(distribucion_binomial(5, 2, 0.5))
