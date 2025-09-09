@@ -7,4 +7,7 @@ def factorial(n):
     else:
         return n * factorial(n - 1)
 
-print(factorial(500))
+def combinatoria(n, r):
+    return factorial(n) // (factorial(r) * factorial(n - r))
+
+print(combinatoria(3, 2))
